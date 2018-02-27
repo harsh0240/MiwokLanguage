@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/numbers_list"
+    android:drawSelectorOnTop="true"
     tools:context="com.example.user.miwok.PhrasesActivity">
 
 

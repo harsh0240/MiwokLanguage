@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -48,7 +49,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         final Word currentWord = getItem(position);
 
-        LinearLayout listBg = (LinearLayout) listItemView.findViewById(R.id.list);
+        RelativeLayout listBg = (RelativeLayout) listItemView.findViewById(R.id.list);
         listBg.setBackgroundResource(bg_res);
 
         TextView miwText = (TextView) listItemView.findViewById(R.id.miwok);

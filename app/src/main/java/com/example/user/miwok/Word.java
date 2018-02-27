@@ -36,4 +36,14 @@ public class Word{
     }
 
     public int getAudioResource(){return audioRes;}
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "english='" + english + '\'' +
+                ", miwok='" + miwok + '\'' +
+                ", resource=" + resource +
+                ", audioRes=" + audioRes +
+                '}';
+    }
 }

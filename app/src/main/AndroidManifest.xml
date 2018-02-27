@@ -17,16 +17,20 @@
         </activity>
         <activity android:name=".NumbersActivity"
             android:theme="@style/Numbers"
-            android:label="Numbers"/>
+            android:label="Numbers"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".FamilyActivity"
             android:theme="@style/FamilyMembers"
-            android:label="Family Members"/>
+            android:label="Family Members"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".ColorsActivity"
             android:theme="@style/Colors"
-            android:label="Colors"/>
+            android:label="Colors"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".PhrasesActivity"
             android:theme="@style/Phrases"
-            android:label="Phrases"/>
+            android:label="Phrases"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

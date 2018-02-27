@@ -11,14 +11,15 @@
         android:id="@+id/image"
         android:background="#BCAAA4"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list"
+        android:orientation="vertical"
         android:gravity="center_vertical"
+        android:background="@android:color/holo_blue_dark"
         android:paddingLeft="16dp"
-        android:orientation="vertical">
-
+        android:paddingRight="16dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,11 +31,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/miwok"
             android:id="@+id/english"
             android:textSize="20sp"
             android:fontFamily="monospace"
             android:textStyle="bold"/>
 
-    </LinearLayout>
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_play_circle_outline_white_24dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+
 
 </LinearLayout>

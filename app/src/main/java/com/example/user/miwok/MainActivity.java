@@ -2,6 +2,8 @@ package com.example.user.miwok;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,41 +18,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView numbers = (TextView) findViewById(R.id.numbers);
-        numbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Opening Numbers List",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,NumbersActivity.class));
-            }
-        });
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        TextView family = (TextView) findViewById(R.id.family);
-        family.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Opening Family Members List",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,FamilyActivity.class));
-            }
-        });
+        // Create an adapter that knows which fragment should be shown on each page
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
 
-        TextView colors = (TextView) findViewById(R.id.colors);
-        colors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Opening Colors List",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,ColorsActivity.class));
-            }
-        });
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
 
-        TextView phrases = (TextView) findViewById(R.id.phrases);
-        phrases.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Opening Phrases List",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,PhrasesActivity.class));
-            }
-        });
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
+
+
     }
 
 }

@@ -1,48 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.user.miwok.MainActivity">
 
-    <LinearLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:background="#880E4F"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E0E0E0"
-        android:orientation="vertical"
-        android:paddingTop="50dp">
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabMaxWidth="264dp"
+        app:tabTextColor="#afffffff" />
 
-        <TextView
-            android:id="@+id/numbers"
-            style="@style/Tabs"
-            android:background="@drawable/layout_numbers"
-            android:text="Numbers"
-            android:textColor="#E8EAF6" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/family"
-            style="@style/Tabs"
-            android:background="@drawable/layout_family"
-            android:text="Family Members"
-            android:textColor="#E0F2F1" />
-
-        <TextView
-            android:id="@+id/colors"
-            style="@style/Tabs"
-            android:background="@drawable/layout_colors"
-            android:text="Colors"
-            android:textColor="#FFF3E0" />
-
-        <TextView
-            android:id="@+id/phrases"
-            style="@style/Tabs"
-            android:background="@drawable/layout_phrases"
-            android:text="Phrases"
-            android:textColor="#F3E5F5" />
-
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
